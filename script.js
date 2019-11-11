@@ -5,7 +5,6 @@ window.onload = function () {
 function initRegex() {
 	let p3 = document.getElementById("p3");
 	p3.addEventListener("click", (event) => {
-		console.log("p3 clicked");
 		handleP3(event, p3);
 
 	})
@@ -16,10 +15,10 @@ function handleP3(event, paragraphRef) {
 		event.preventDefault();
 	}
 	let text = paragraphRef.textContent;
-	console.log(text);
+	//3 letter words that have white space on either side and are not preceded by another 3 letter word
 	let expression = /\s\w\w\w\s/gi;
+	//replace w/ cat
 	newText = text.replace(expression, ' cat ');
-	console.log(newText);
 	paragraphRef.textContent = newText;
 }
 
@@ -72,8 +71,4 @@ function onClickP1() {
 	//make the array back into a string
 	let paragraph = textArray.join('');
 	p1.textContent = paragraph;
-}
-
-function onClickP2() {
-
 }
