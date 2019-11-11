@@ -38,3 +38,13 @@ function selectH1() {
 	console.log("Here I am");
 	header.style.fontFamily = 'cursive';
 }
+
+function onClickP1() {
+	let paragraph = document.getElementById("p1");
+	let cipher = {'A':'N', }
+	textArray = paragraph.textContent.split(' ');
+	for (let i =0; i < textArray.length; ++i) {
+		textArray[i]
+	}
+
+}
