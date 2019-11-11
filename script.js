@@ -1,5 +1,26 @@
 window.onload = function () {
-	// initPage();
+	initRegex();
+}
+
+function initRegex() {
+	let p3 = document.getElementById("p3");
+	p3.addEventListener("click", (event) => {
+		console.log("p3 clicked");
+		handleP3(event, p3);
+
+	})
+}
+
+function handleP3(event, paragraphRef) {
+	if (event.preventDefault) {
+		event.preventDefault();
+	}
+	let text = paragraphRef.textContent;
+	console.log(text);
+	let expression = /\s\w\w\w\s/gi;
+	newText = text.replace(expression, ' cat ');
+	console.log(newText);
+	paragraphRef.textContent = newText;
 }
 
 
@@ -51,4 +72,8 @@ function onClickP1() {
 	//make the array back into a string
 	let paragraph = textArray.join('');
 	p1.textContent = paragraph;
+}
+
+function onClickP2() {
+
 }
